@@ -1,0 +1,778 @@
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/jquery/jquery-3.5.1.min.js"
+    type="text/javascript"></script>
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/jquery/jquery-3.5.1.min.js"
+    type="text/javascript"></script>
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/jquery/jquery.rwdImageMaps.min.js"
+    type="text/javascript"></script>
+<link href="https://www.veiligheids-sloten.nl/catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+    media="screen">
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/bootstrap/js/bootstrap.min.js"
+    type="text/javascript"></script>
+<link href="https://www.veiligheids-sloten.nl/catalog/view/javascript/font-awesome/css/font-awesome.min.css"
+    rel="stylesheet" type="text/css">
+<link href="https://www.veiligheids-sloten.nl/catalog/view/theme/default/stylesheet/stylesheet.min.css" rel="stylesheet"
+    type="text/css">
+<link href="https://www.veiligheids-sloten.nl/catalog/view/theme/default/stylesheet/megamenu.min.css" rel="stylesheet"
+    type="text/css">
+<link href="https://www.veiligheids-sloten.nl/catalog/view/theme/default/stylesheet/megamenu.min.css" rel="stylesheet"
+    type="text/css">
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/common.min.js" type="text/javascript"></script>
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/menu.min.js?1623154250"
+    type="text/javascript"></script>
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js"
+    type="text/javascript"></script>
+
+<head>
+    <style>
+        .full-width {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background-color: #008add;
+            z-index: 0;
+            overflow: auto;
+        }
+
+        @media (min-width:479px) {
+            .full-width {
+                overflow: initial;
+            }
+        }
+
+        .full-width-inner {
+            max-width: 1140px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #0093dd;
+        }
+
+        @media (min-width:768px) and (max-width:991px) {
+            .full-width-inner {
+                max-width: 720px;
+            }
+        }
+
+        @media (min-width:992px) and (max-width:1199px) {
+            .full-width-inner {
+                max-width: 940px;
+            }
+        }
+
+        .hero-grid {
+            max-width: 100%;
+            width: 100%;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+        @media (min-width:479px) {
+            .hero-grid {
+                padding-left: 4rem;
+                padding-right: 4rem;
+            }
+        }
+
+        @media (min-width:1200px) {
+            .hero-grid {
+                max-width: 100%;
+                padding-left: 12rem;
+                padding-right: 12rem
+            }
+        }
+
+        .hero {
+            padding-top: 10rem;
+            padding-bottom: 10rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-heading {
+            color: #fff;
+            font-size: 28px;
+            line-height: 44px;
+            max-width: 16.25em;
+            font-family: inherit;
+        }
+
+        .hero-heading .select {
+            margin-top: 0.8rem;
+            font-size: 2rem;
+        }
+
+        .btn-special {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .12);
+            border-radius: 1.75em;
+            font-size: 2rem;
+            line-height: 1.25;
+            padding: .875em 1.5em .875em 1.5em;
+        }
+
+        @media (min-width:320px) {
+            .hero-heading {
+                font-size: calc(28px + (1000vw - 3200px)/159)
+            }
+        }
+
+        @media (min-width:320px) {
+            .hero-heading {
+                line-height: calc(64px + (400vw - 1280px)/159)
+            }
+
+            .hero {
+                padding-top: 4rem;
+                padding-bottom: 2rem;
+            }
+        }
+
+        @media (min-width:479px) {
+            .hero-heading {
+                font-size: 4.5rem;
+                line-height: 72px;
+                max-width: 54rem
+            }
+
+            .hero-heading .select {
+                margin-top: .875rem;
+                font-size: 1.125rem;
+            }
+
+            .select-toggle {
+                margin-top: 8px;
+            }
+
+            .hero {
+                padding-top: 4rem;
+                padding-bottom: 0rem;
+            }
+        }
+
+        .hero-heading .select:first-child {
+            z-index: 4
+        }
+
+        .hero-heading .select:nth-child(2) {
+            z-index: 3
+        }
+
+        .hero-heading .select:nth-child(3) {
+            z-index: 2
+        }
+
+        .hero-heading .select:nth-child(4) {
+            z-index: 1
+        }
+
+        @media (max-width:479px) {
+
+            .hero .btn,
+            .hero .hubspotForm .hs-form .hs-button,
+            .hubspotForm .hs-form .hero .hs-button {
+                width: 100%
+            }
+        }
+
+        @media (max-width:419px) {
+            .hero-heading .select button {
+                box-shadow: 0 5px 10px -1px rgba(0, 0, 0, .16)
+            }
+        }
+
+        @media (min-width:768px) {
+            .hero-heading {
+                font-size: 4.5rem;
+                line-height: 1.8;
+                max-width: 61rem
+            }
+
+            .hero-heading .select {
+                margin-top: 1.45rem;
+                font-size: 1.125rem;
+                width: 280px;
+            }
+
+            .hero-heading .select:nth-child(2) {
+                width: 300px;
+            }
+
+            .hero-heading .select:nth-child(3) {
+                width: 425px;
+            }
+
+            .select-toggle {
+                margin-top: 0px;
+            }
+
+            .hero {
+                padding-top: 10rem;
+                padding-bottom: 10rem;
+            }
+
+            .btn-special {
+                font-size: 2.5rem;
+                margin-top: 2rem;
+            }
+        }
+
+        @media (min-width:1200px) {
+            .hero-heading {
+                font-size: 5.5rem;
+                line-height: 1.6;
+                max-width: 68rem;
+            }
+
+            .hero-heading .select {
+                margin-top: 1.6rem;
+                font-size: 1.125rem;
+                width: 285px;
+            }
+
+            .hero-heading .select:nth-child(2) {
+                width: 320px;
+            }
+
+            .hero-heading .select:nth-child(3) {
+                width: 425px;
+            }
+
+            .select-toggle {
+                margin-top: 0px;
+            }
+        }
+
+        .select {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            color: #0c0116;
+            line-height: 1.4;
+        }
+
+        .select-toggle {
+            position: relative;
+            display: block;
+            font-size: 2rem;
+            line-height: 1.25;
+            background-color: #fff;
+            color: #0c0116;
+            border: 0;
+            padding: .875em 3.125em .875em 1.25em;
+            text-align: left;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .12);
+            border-radius: 1.75em;
+        }
+
+        .select-toggle:focus,
+        .select-toggle:active,
+        .select-toggle:focus-visible,
+        .btn-special:focus,
+        .btn-special:active {
+            outline: none !important;
+        }
+
+        .select-toggle:hover {
+            color: #555;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .12)
+        }
+
+        .select-toggle[aria-expanded=false]:focus {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .select-toggle[aria-expanded=false]:focus,
+        .select-toggle[aria-expanded=false]:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+        }
+
+        .select-toggle svg {
+            position: absolute;
+            right: 1.5em;
+            top: 1.25em;
+            width: .625em;
+            height: .625em;
+            transform: scaleY(-1)
+        }
+
+        .select-toggle[aria-expanded=true] svg {
+            transform: scaleY(1)
+        }
+
+        @media (max-width:479px) {
+            .select-toggle {
+                font-size: 1.4rem;
+            }
+        }
+
+        .select-list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin: -1px;
+            list-style: none;
+            padding: 0 1.125em .375em;
+            background-color: #fff;
+            font-size: 1em;
+            font-weight: 400;
+            min-width: 100%;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .12);
+            border-radius: 0 0 1.75em 1.75em;
+        }
+
+        .select-list:focus {
+            outline: none
+        }
+
+        .select-list li {
+            padding: .75em 0;
+            border-top: 1px solid #dce6e7;
+            white-space: nowrap;
+            font-size: 1.8rem;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .select-list li:nth-child(1) {
+            border-top: none;
+        }
+
+        .select-list li:focus,
+        .select-list li:hover {
+            color: #0093dd
+        }
+
+        .select-toggle[aria-expanded=true] {
+            background-color: #eee;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            width: 99.6%;
+        }
+
+        @media (max-width:767px) {
+            .select-toggle {
+                box-shadow: 0 5px 10px rgba(0, 0, 0, .12);
+                font-size: 1.8rem;
+            }
+
+            .select-toggle[aria-expanded=false]:focus,
+            .select-toggle[aria-expanded=false]:hover {
+                box-shadow: 0 5px 15px rgba(0, 0, 0, .2)
+            }
+        }
+
+        @media (max-width:359px) {
+            .select-toggle {
+                font-size: .875em
+            }
+        }
+
+        .hero-grid video {
+            width: 440px;
+            position: relative;
+            z-index: 0;
+            border-radius: 100% 0 0 0;
+        }
+
+        .video-main {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            bottom: 0px;
+            right: -1rem;
+        }
+
+        @media (min-width:479px) {
+            .video-main {
+                right: -4rem;
+            }
+        }
+
+        @media (min-width:768px) {
+            .video-main {
+                position: absolute;
+                display: block;
+                right: 0;
+                bottom: -7px;
+            }
+        }
+    </style>
+
+</head>
+
+<div class="full-width">
+    <div class="full-width-inner" tabindex="-1">
+        <div class="hero-grid">
+            <div class="hero">
+                <h1 class="hero-heading">
+                    Ik ben voor mijn
+                    <div class="dropdown select">
+                        <button class="btn btn-secondary dropdown-toggle select-toggle dropdown1text" type="button"
+                            data-toggle="dropdown">Woning
+                            <span aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11.444" height="11.444"
+                                    viewBox="0 -1.5 11.444 11.444">
+                                    <path
+                                        d="M100.047,65.379l4.637,5.5a1.085,1.085,0,0,1-.831,1.782H94.579a1.086,1.086,0,0,1-.831-1.782l4.636-5.5a1.1,1.1,0,0,1,1.662,0Z"
+                                        transform="translate(-93.495 -65)" fill="currentColor"></path>
+                                </svg>
+
+                            </span></button>
+                        <ul class="dropdown-menu select-list dropdown1" id="dropdown1">
+                            <li>Woning</li>
+                            <li>Bedrijfspand</li>
+                            <li>VVE</li>
+                            <li>Hotel</li>
+                            <li>Appartementencomplex</li>
+                        </ul>
+                    </div>
+                    op zoek naar
+                    <div class="dropdown select" id="">
+                        <button class="btn btn-secondary dropdown-toggle select-toggle dropdown2text" type="button"
+                            data-toggle="dropdown">Cilinders
+                            <span aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11.444" height="11.444"
+                                    viewBox="0 -1.5 11.444 11.444">
+                                    <path
+                                        d="M100.047,65.379l4.637,5.5a1.085,1.085,0,0,1-.831,1.782H94.579a1.086,1.086,0,0,1-.831-1.782l4.636-5.5a1.1,1.1,0,0,1,1.662,0Z"
+                                        transform="translate(-93.495 -65)" fill="currentColor"></path>
+                                </svg>
+
+                            </span></button>
+                        <ul class="dropdown-menu select-list dropdown2" id="dropdown2">
+                            <li>Cilinders</li>
+                            <li>Deurbeslag (Binnen)</li>
+                            <li>Deurbeslag (Buiten)</li>
+                            <li>Insteeksloten</li>
+                            <li>Meerpuntssluiting</li>
+                            <li>Raambeveiliging</li>
+                            <li>Smartlocks</li>
+                            <li>Toegangscontrole</li>
+                        </ul>
+                    </div>
+                    en
+                    <div class="dropdown select" id="">
+                        <button class="btn btn-secondary dropdown-toggle select-toggle dropdown3text" type="button"
+                            data-toggle="dropdown">Ik weet wat ik nodig heb
+                            <span aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11.444" height="11.444"
+                                    viewBox="0 -1.5 11.444 11.444">
+                                    <path
+                                        d="M100.047,65.379l4.637,5.5a1.085,1.085,0,0,1-.831,1.782H94.579a1.086,1.086,0,0,1-.831-1.782l4.636-5.5a1.1,1.1,0,0,1,1.662,0Z"
+                                        transform="translate(-93.495 -65)" fill="currentColor"></path>
+                                </svg>
+
+                            </span></button>
+                        <ul class="dropdown-menu select-list dropdown3" id="dropdown3">
+                            <li>Ik weet wat ik nodig heb</li>
+                            <li>Ik weet niet waar ik moet beginnen</li>
+                            <li>Ik besteed de werkzaamheden graag uit!</li>
+                        </ul>
+                    </div>
+                </h1>
+
+                <form METHOD=POST>
+                    <div style="display: none;">
+                        <div id="formPart1">
+                            <input type="radio" name="a" value="1000" checked>Woning<br>
+                            <input type="radio" name="a" value="2000">Bedrijfspand<br>
+                            <input type="radio" name="a" value="3000">VVE<br>
+                            <input type="radio" name="a" value="4000">Hotel<br>
+                            <input type="radio" name="a" value="5000">Appartementencomplex<br>
+                        </div>
+                        <div id="formPart2">
+                            <input type="radio" name="b" value="100" checked>Cilinders<br>
+                            <input type="radio" name="b" value="200">Deurbeslag (Binnen)<br>
+                            <input type="radio" name="b" value="300">Deurbeslag (Buiten)<br>
+                            <input type="radio" name="b" value="400">Insteeksloten<br>
+                            <input type="radio" name="b" value="500">Meerpuntssluiting<br>
+                            <input type="radio" name="b" value="600">Raambeveiliging<br>
+                            <input type="radio" name="b" value="700">Smartlocks<br>
+                            <input type="radio" name="b" value="800">Toegangscontrole<br>
+                        </div>
+                        <div id="formPart3">
+                            <input type="radio" name="c" value="10" checked>Ik weet wat ik nodig heb<br>
+                            <input type="radio" name="c" value="20">Ik weet niet waar ik moet beginnen<br>
+                            <input type="radio" name="c" value="30">Help mij! Ik besteed de werkzaamheden graag uit!<br>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-lg btn-primary btn-special" onClick=computeForm(this.form)>
+                        Verder</button>
+                </form>
+            </div>
+            <div class="video-main">
+                <video loop="" muted="" autoplay="">
+                    <source class="default"
+                        src="https://www.veiligheids-sloten.nl/blog/wp-content/uploads/2021/09/video.mp4"
+                        type="video/mp4">
+                    <source class="default"
+                        src="https://www.veiligheids-sloten.nl/blog/wp-content/uploads/2021/09/video.webm"
+                        type="video/webm">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script LANGUAGE="JavaScript">
+    function test_it(entry) {
+        if (entry.value != null && entry.value.length != 0) {
+            entry.value = "" + eval(entry.value);
+        }
+        computeForm(entry.form);
+    }
+
+    function computeForm(form) {
+        var total = 0
+        for (var count = 0; count < 5; count++) {
+            if (form.a[count].checked) {
+                var total = total + parseInt(form.a[count].value);
+            }
+        }
+        for (var count = 0; count < 8; count++) {
+            if (form.b[count].checked) {
+                var total = total + parseInt(form.b[count].value);
+            }
+        }
+        for (var count = 0; count < 3; count++) {
+            if (form.c[count].checked) {
+                var total = total + parseInt(form.c[count].value);
+            }
+        }
+        switch (total) {
+            //woning
+            case 1110:
+                window.location = "/cilindersloten"
+                break;
+            case 1210:
+                window.location = "/binnendeurbeslag"
+                break;
+            case 1310:
+                window.location = "/kerntrekbeslag"
+                break;
+            case 1410:
+                window.location = "/sloten"
+                break;
+            case 1510:
+                window.location = "/sloten/meerpuntssluitingen"
+                break;
+            case 1610:
+                window.location = "/raambeveiliging"
+                break;
+            case 1710:
+                window.location = "/cilindersloten/type/smart-locks"
+                break;
+            case 1810:
+                window.location = "/cilindersloten/type/smart-locks"
+                break;
+            case 1120:
+                window.location = "/informatie/cilinders/algemeen"
+                break;
+            case 1220:
+                window.location = "/informatie/info-deurbeslag/algemene-deurbeslag-informatie"
+                break;
+            case 1320:
+                window.location = "/informatie/info-deurbeslag/algemene-deurbeslag-informatie"
+                break;
+            case 1420:
+                window.location = "/informatie/insteeksloten"
+                break;
+            case 1520:
+                window.location = "/informatie/meerpuntssluiting"
+                break;
+            case 1620:
+                window.location = "/raambeveiliging"
+                break;
+            case 1720:
+                window.location = "/informatie/smartlocks/wat-is-een-smart-lock"
+                break;
+            case 1820:
+                window.location = "/informatie/smartlocks/wat-is-een-smart-lock"
+                break;
+            case 1130:
+            case 1230:
+            case 1330:
+            case 1430:
+            case 1530:
+            case 1630:
+            case 1730:
+            case 1830:
+                window.location = "/offerte-aanvragen"
+                break;
+            //bedrijf
+            case 2110:
+                window.location = "/cilindersloten"
+                break;
+            case 2210:
+                window.location = "/binnendeurbeslag"
+                break;
+            case 2310:
+                window.location = "/kerntrekbeslag"
+                break;
+            case 2410:
+                window.location = "/sloten"
+                break;
+            case 2510:
+                window.location = "/sloten/meerpuntssluitingen"
+                break;
+            case 2610:
+                window.location = "/raambeveiliging"
+                break;
+            case 2710:
+                window.location = "/cilindersloten/type/smart-locks"
+                break;
+            case 2810:
+                window.location = "/cilindersloten/type/smart-locks"
+                break;
+            case 2120:
+            case 2220:
+            case 2320:
+            case 2420:
+            case 2520:
+            case 2620:
+            case 2720:
+            case 2820:
+            case 2130:
+            case 2230:
+            case 2330:
+            case 2430:
+            case 2530:
+            case 2630:
+            case 2730:
+            case 2830:
+                window.location = "/zakelijk"
+                break;
+            //VVE
+            case 3110:
+            case 3210:
+            case 3310:
+            case 3410:
+            case 3510:
+            case 3610:
+            case 3710:
+            case 3810:
+            case 3120:
+            case 3220:
+            case 3320:
+            case 3420:
+            case 3520:
+            case 3620:
+            case 3720:
+            case 3820:
+            case 3130:
+            case 3230:
+            case 3330:
+            case 3430:
+            case 3530:
+            case 3630:
+            case 3730:
+            case 3830:
+                window.location = "/woningcorporaties"
+                break;
+            //Hotel 
+            case 4110:
+            case 4210:
+            case 4310:
+            case 4410:
+            case 4510:
+            case 4610:
+            case 4710:
+            case 4810:
+            case 4120:
+            case 4220:
+            case 4320:
+            case 4420:
+            case 4520:
+            case 4620:
+            case 4720:
+            case 4820:
+            case 4130:
+            case 4230:
+            case 4330:
+            case 4430:
+            case 4530:
+            case 4630:
+            case 4730:
+            case 4830:
+                window.location = "/hotels"
+                break;
+            //A.Complex
+            case 5110:
+            case 5210:
+            case 5310:
+            case 5410:
+            case 5510:
+            case 5610:
+            case 5710:
+            case 5810:
+            case 5120:
+            case 5220:
+            case 5320:
+            case 5420:
+            case 5520:
+            case 5620:
+            case 5720:
+            case 5820:
+            case 5130:
+            case 5230:
+            case 5330:
+            case 5430:
+            case 5530:
+            case 5630:
+            case 5730:
+            case 5830:
+                window.location = "/woningcorporaties"
+                break;
+            default:
+                window.location = "/linknodig"
+        }
+    }
+</SCRIPT>
+
+<script>
+    $(document).on('click', '#dropdown1 li', function () {
+        var index = $(this).index();
+        $('#formPart1 input:radio').eq(index).prop('checked', true);
+    })
+    $(document).on('click', '#dropdown2 li', function () {
+        var index = $(this).index();
+        $('#formPart2 input:radio').eq(index).prop('checked', true);
+    })
+    $(document).on('click', '#dropdown3 li', function () {
+        var index = $(this).index();
+        $('#formPart3 input:radio').eq(index).prop('checked', true);
+    })
+</script>
+<script>
+    $(function () {
+        $(".dropdown1 li").click(function () {
+            $(".dropdown1text:first-child ").html($(this).text() + ' <span aria-expanded="false"><svg xmlns = "http://www.w3.org/2000/svg" width = "11.444" height = "11.444" viewBox = "0 -1.5 11.444 11.444"><path d = "M100.047,65.379l4.637,5.5a1.085,1.085,0,0,1-.831,1.782H94.579a1.086,1.086,0,0,1-.831-1.782l4.636-5.5a1.1,1.1,0,0,1,1.662,0Z" transform = "translate(-93.495 -65)"= fill = "currentColor" ></path></svg ></span>');
+            $(".dropdown1text:first-child ").val($(this).text());
+        });
+    });
+    $(function () {
+        $(".dropdown2 li").click(function () {
+            $(".dropdown2text:first-child ").html($(this).text() + ' <span aria-expanded="false"><svg xmlns = "http://www.w3.org/2000/svg" width = "11.444" height = "11.444" viewBox = "0 -1.5 11.444 11.444"><path d = "M100.047,65.379l4.637,5.5a1.085,1.085,0,0,1-.831,1.782H94.579a1.086,1.086,0,0,1-.831-1.782l4.636-5.5a1.1,1.1,0,0,1,1.662,0Z" transform = "translate(-93.495 -65)"= fill = "currentColor" ></path></svg ></span>');
+            $(".dropdown2text:first-child ").val($(this).text());
+        });
+    });
+    $(function () {
+        $(".dropdown3 li").click(function () {
+            $(".dropdown3text:first-child ").html($(this).text() + ' <span aria-expanded="false"><svg xmlns = "http://www.w3.org/2000/svg" width = "11.444" height = "11.444" viewBox = "0 -1.5 11.444 11.444"><path d = "M100.047,65.379l4.637,5.5a1.085,1.085,0,0,1-.831,1.782H94.579a1.086,1.086,0,0,1-.831-1.782l4.636-5.5a1.1,1.1,0,0,1,1.662,0Z" transform = "translate(-93.495 -65)"= fill = "currentColor" ></path></svg ></span>');
+            $(".dropdown3text:first-child ").val($(this).text());
+        });
+    });
+</script>

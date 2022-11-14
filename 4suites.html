@@ -1,0 +1,1323 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/jquery/jquery-3.5.1.min.js"
+    type="text/javascript"></script>
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/jquery/jquery-3.5.1.min.js"
+    type="text/javascript"></script>
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/jquery/jquery.rwdImageMaps.min.js"
+    type="text/javascript"></script>
+<link href="https://www.veiligheids-sloten.nl/catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+    media="screen">
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/bootstrap/js/bootstrap.min.js"
+    type="text/javascript"></script>
+<link href="https://www.veiligheids-sloten.nl/catalog/view/javascript/font-awesome/css/font-awesome.min.css"
+    rel="stylesheet" type="text/css">
+<link href="https://www.veiligheids-sloten.nl/catalog/view/theme/default/stylesheet/stylesheet.min.css" rel="stylesheet"
+    type="text/css">
+<link href="https://www.veiligheids-sloten.nl/catalog/view/theme/default/stylesheet/megamenu.min.css" rel="stylesheet"
+    type="text/css">
+<link href="https://www.veiligheids-sloten.nl/catalog/view/theme/default/stylesheet/megamenu.min.css" rel="stylesheet"
+    type="text/css">
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/common.min.js" type="text/javascript"></script>
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/menu.min.js?1623154250"
+    type="text/javascript"></script>
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js"
+    type="text/javascript"></script>
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/bootstrap/js/bootstrap.min.js"
+    type="text/javascript">
+    </script>
+
+<script>
+    function openPageInfo(pageName, elmnt, color) {
+        var i, contentButtonsTabs, contentButtons;
+        contentButtonsTabs = document.getElementsByClassName("contentButtonsTabs");
+        for (i = 0; i < contentButtonsTabs.length; i++) {
+            contentButtonsTabs[i].style.display = "none";
+        }
+        contentButtons = document.getElementsByClassName("contentButtons");
+        for (i = 0; i < contentButtons.length; i++) {
+            contentButtons[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+    }
+    document.getElementById("defaultOpenInfo").click();
+</script>
+
+<style>
+    .glyphicon-bed:before {
+        content: "\e219";
+    }
+
+    .side-button-color {
+        background-color: #404041;
+        color: white;
+        font-size: 20px;
+        padding: 8px;
+        border-radius: 5px;
+        border-color: white;
+    }
+
+    .side-button-color:hover {
+        background-color: #7b7b7b;
+        border-radius: 5px;
+        border-color: white;
+    }
+
+    .side-button-color:active,
+    .side-button-color:focus {
+        border: 2px solid lightgray;
+        outline: 0;
+    }
+
+    .h1:first-of-type {
+        display: none;
+    }
+
+    .category_title {
+        display: none;
+    }
+
+    .logo-background {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("https://www.veiligheids-sloten.nl/blog/wp-content/uploads/2020/06/Screen-Shot-2020-06-10-at-13.46.04-1.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        display: block;
+        height: 200px;
+    }
+
+    .centerBlock {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .logoImage {
+        width: 35em;
+        position: absolute;
+        top: 36px;
+        z-index: 3;
+    }
+
+    .itemColor {
+        color: #ec3a6a;
+        padding: 5px;
+    }
+
+    .itemSize {
+        font-size: 40px;
+    }
+
+    .textBackground {
+        background-color: #eee;
+    }
+
+    .emptyMargin {
+        margin-top: 50px;
+    }
+
+    .titleColor {
+        color: #000;
+        font-family: 'Archivo Narrow';
+        font-weight: 500;
+    }
+
+    .blockBackground {
+        background-color: #F6F6F6;
+        padding: 20px;
+        width: 50%;
+        text-align: center;
+        display: block;
+        color: black;
+    }
+
+    .contentButtons {
+        background-color: #f4f4f4;
+        color: Black;
+        border: 1px solid #cecbcb;
+        float: left;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 20px;
+        width: 25%;
+        border-right: none;
+    }
+
+    .contentButtons:hover {
+        background-color: rgba(196, 196, 196, 0.49);
+    }
+
+    .contentButtonsTabs {
+        color: #000000;
+        display: none;
+        padding: 20px;
+        height: 100%;
+        padding-bottom: 50px;
+    }
+
+    .flexContent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .imgPadding {
+        padding: 10px;
+        padding-bottom: 50px;
+    }
+
+    #Product,
+    #Sleutels,
+    #Systeem,
+    #Referenties,
+    #Videos,
+    #Downloads {
+        border: 1px solid #ddd;
+        border-left: none;
+        border-right: none;
+        background-color: #eee;
+    }
+
+    .main-button-color {
+        background-color: #ec3a6a;
+        color: white;
+        font-size: 20px;
+        padding: 8px;
+        border-radius: 5px;
+        border-color: white;
+    }
+
+    .main-button-color:hover {
+        background-color: #f17495;
+        border-radius: 5px;
+        border-color: white;
+    }
+
+    .main-button-color:active,
+    .main-button-color:focus {
+        border: 2px solid lightgray;
+        outline: 0;
+    }
+
+    .imgCenter {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .videoContainer {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+    }
+
+    .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .jumbotron {
+        margin-bottom: 0;
+    }
+
+    .caroussel-text {
+        position: absolute;
+        right: 8em;
+        z-index: 3;
+        background-color: #ffffff;
+        padding: 1em 2em 2em 2em;
+        text-align: center;
+        border-radius: 20px;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .item-header {
+        font-size: 45px;
+    }
+
+    .caroussel-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .caroussel-height {
+        height: 32em;
+    }
+
+    .caroussel-height-inner {
+        height: 32em;
+    }
+
+    .padding-text {
+        padding: 2em 0em 2em 6em
+    }
+
+    .padding-text-inverted {
+        padding: 2em 6em 2em 0em
+    }
+
+    .fix-margin {
+        margin-bottom: -100px;
+    }
+
+    .button-inner {
+        font-size: 20px;
+        margin-top: 10px;
+        padding: 16px;
+        display: block;
+        margin: auto;
+        float: right;
+        width: 100%;
+    }
+
+    .text-align-content-left {
+        text-align: start;
+    }
+
+    .text-align-content-right {
+        text-align: end;
+    }
+
+    .brands {
+        max-width: 300px;
+    }
+</style>
+<!-- mobiel/ipad -->
+<style>
+    @media only screen and (min-width: 1200px) {
+        .contentFixLeft {
+            right: 50%;
+        }
+
+        .contentFixRight {
+            left: 50%
+        }
+
+        .v-center {
+            display: flex;
+            align-items: center;
+        }
+
+        .padding-left-0 {
+            padding-left: 0;
+        }
+
+        .padding-right-0 {
+            padding-right: 0;
+        }
+    }
+
+    @media only screen and (max-width: 1199px) and (min-width: 992px) {
+        .contentFixLeft {
+            right: 50%;
+        }
+
+        .contentFixRight {
+            left: 50%
+        }
+
+        .v-center {
+            display: flex;
+            align-items: center;
+        }
+
+        .padding-left-0 {
+            padding-left: 0;
+        }
+
+        .padding-right-0 {
+            padding-right: 0;
+        }
+
+        .button-inner {
+            font-size: 16px;
+        }
+
+        .width-100-md {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 991px) and (min-width: 768px) {
+        .imageContentFix {
+            clear: none !important;
+        }
+
+        .contentFixLeft {
+            right: 50%;
+        }
+
+        .contentFixRight {
+            left: 50%
+        }
+
+        .caroussel-height {
+            height: 64em;
+        }
+
+        .padding-left-0 {
+            padding-left: 0;
+        }
+
+        .padding-right-0 {
+            padding-right: 0;
+        }
+
+        .padding-text {
+            padding: 3em;
+        }
+
+        .text-align-content-left {
+            text-align: center;
+        }
+
+        .text-align-content-right {
+            text-align: center;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .contentButtons {
+            width: 100%;
+            border: 1px solid #cecbcb !important;
+        }
+
+        .brands,
+        .buttonfix {
+            width: 100%;
+        }
+
+        .caroussel-height {
+            height: 100%;
+        }
+
+        .padding-mobile {
+            padding-left: 2em !important;
+            padding-right: 2em !important;
+        }
+
+        .padding-mobile-vertical {
+            padding-bottom: 2em !important;
+            padding-top: 2em !important;
+        }
+
+        .margin-mobile {
+            margin: 0 0 0 0;
+        }
+
+        .padding-left-right-0 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .text-align-content-left {
+            text-align: center;
+        }
+
+        .text-align-content-right {
+            text-align: center;
+        }
+    }
+</style>
+<style>
+    .timeline {
+        min-width: 300px;
+        max-width: 500px;
+        margin: auto;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .inner-timeline {
+        font-size: 1em;
+        line-height: 1.75em;
+        border-top: 3px solid;
+        border-image: linear-gradient(to right, #0093dd 0%, #43b0e6 100%);
+        border-image-slice: 1;
+        border-width: 3px;
+        margin: 0;
+        padding: 40px;
+        counter-increment: section;
+        position: relative;
+    }
+
+    .inner-timeline::before {
+        content: counter(section);
+        position: absolute;
+        border-radius: 50%;
+        padding: 10px;
+        height: 1.5em;
+        width: 1.5em;
+        background-color: #7e7e7e;
+        text-align: center;
+        line-height: 0.6em;
+        color: white;
+        font-size: 1.5em;
+    }
+
+    .inner-timeline-title {
+        color: #0092dd;
+    }
+
+    .inner-timeline:nth-child(odd) {
+        border-right: 3px solid;
+        padding-left: 0;
+    }
+
+    .inner-timeline:nth-child(odd)::before {
+        left: 100%;
+        margin-left: -16px;
+        margin-top: 18px;
+    }
+
+    .inner-timeline:nth-child(even) {
+        border-left: 3px solid;
+        padding-right: 0;
+    }
+
+    .inner-timeline:nth-child(even)::before {
+        right: 100%;
+        margin-right: -16px;
+        margin-top: 18px;
+    }
+
+    .inner-timeline:first-child {
+        border-top: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    .inner-timeline:last-child {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .tech-slideshow {
+        height: 117px;
+        max-width: 1140px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .tech-slideshow>div {
+        height: 117px;
+        width: 4190px;
+        background: url(https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/caroussel2-1-scaled-1.jpg);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .tech-slideshow .mover-1 {
+        animation: moveSlideshow 90s linear infinite;
+    }
+
+    @keyframes moveSlideshow {
+        100% {
+            transform: translateX(-66.6666%);
+        }
+    }
+</style>
+<style>
+    .merk-background {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .spacer-end {
+        background-image: linear-gradient(rgb(229, 239, 244), #fff);
+        height: 4em;
+    }
+
+    .spacer-end-2 {
+        background-image: linear-gradient(#f7f7f7, #fff);
+        height: 4em;
+    }
+
+    .img-width {
+        width: 500px;
+    }
+
+    .block-overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        z-index: 3;
+    }
+
+    .block-overlay-image {
+        position: absolute;
+        left: 5%;
+        top: 40%;
+        z-index: 2;
+    }
+
+    .block-div {
+        background-color: white;
+        align-self: center;
+    }
+
+    .block-body {
+        padding: 0.5em 1em 0.5em 1em;
+        background-color: white;
+        border-radius: 0.5em;
+    }
+
+    .itemColorTeam {
+        color: #0092dd;
+    }
+
+    .padding-left-icon {
+        padding-left: 2em;
+    }
+
+    .padding-bottom-icon {
+        padding-bottom: 2em;
+    }
+
+    .bg-white {
+        background-color: white;
+    }
+
+    .bg-grey {
+        background-color: #f7f7f7;
+    }
+
+    .block-title-one {
+        background-color: #7E7E7E;
+        color: white;
+        font-size: 2em;
+        padding: 0.5em 1em 0.5em 1em;
+        border-radius: 0.2em 0.2em 0 0;
+        text-align: center;
+    }
+
+    .block-title-two {
+        background-color: #0092dd;
+        color: white;
+        font-size: 2em;
+        padding: 0.5em 1em 0.5em 1em;
+        border-radius: 0.2em 0.2em 0 0;
+        text-align: center;
+    }
+
+    .spacer {
+        height: 4vh;
+        background-color: #f7f7f7;
+    }
+
+    .spacer-white {
+        height: 4vh;
+        background-color: #fff;
+    }
+
+    .spacer-blue {
+        height: 4vh;
+        background-color: rgb(229, 239, 244);
+    }
+
+    .spacer-blue-fix {
+        height: 4vh;
+        background-color: rgb(229, 239, 244);
+    }
+
+    .merk-box-padding {
+        padding: 2em;
+    }
+
+    .block-merk {
+        margin-left: 0rem;
+        margin-right: 0rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        padding: 0 15px 15px 15px;
+    }
+
+    .block-shadow {
+        -webkit-box-shadow: 5px 5px 0px 0px rgb(179, 179, 179);
+        -moz-box-shadow: 5px 5px 0px 0px rgb(179, 179, 179);
+        box-shadow: 5px 5px 0px 0px rgb(179, 179, 179);
+    }
+
+    .merk-size {
+        width: 100%;
+    }
+
+    .merk-padding {
+        padding: 1em;
+    }
+
+    .pijl {
+        width: 100%;
+    }
+
+    .team-exp {
+        text-align: center;
+    }
+
+    .do-not-display {
+        display: none !important;
+    }
+
+    .do-not-display-md {
+        display: none;
+    }
+
+    .do-not-display-xs {
+        display: block;
+    }
+
+    .pijlen-img {
+        width: 500px;
+    }
+
+    .videoContainer {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+    }
+
+    .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        .d-none-button {
+            display: none;
+        }
+
+        .spacer-blue-fix {
+            height: 0;
+        }
+
+        .logo-img {
+            width: 70%;
+        }
+
+        .wizard-tim {
+            background-image: url(https://www.veiligheids-sloten.nl/blog/wp-content/uploads/2020/05/Stap-1-tim.png);
+            background-repeat: no-repeat;
+            background-position: right bottom;
+        }
+    }
+
+    @media only screen and (max-width: 1199px) and (min-width: 992px) {
+        .d-none-button {
+            display: none;
+        }
+
+        .spacer-blue-fix {
+            height: 0;
+        }
+
+        .logo-img {
+            width: 70%;
+        }
+    }
+
+    @media only screen and (max-width: 991px) and (min-width: 768px) {
+        .merk-hide-img-product {
+            display: none;
+        }
+
+        .pijl {
+            width: 10em;
+            padding: 2em;
+        }
+
+        .pijl-rotate {
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+
+        .block-overlay-text {
+            top: 45%;
+            left: 45%;
+        }
+
+        .logo-img {
+            width: 100%;
+        }
+
+        .z-index-0 {
+            z-index: 0 !important;
+        }
+
+        .z-index-1 {
+            z-index: 1 !important;
+        }
+
+        .merk-background {
+            background-image: none;
+        }
+
+        .do-not-display-xs {
+            display: none;
+        }
+
+        .do-not-display-md {
+            display: block;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .img-width {
+            width: 100%;
+            margin-top: -20%;
+        }
+
+        .d-none-button-imgoverlay {
+            display: none;
+        }
+
+        .order-first-mb {
+            order: 1;
+        }
+
+        .order-second-mb {
+            order: 2;
+        }
+
+        .order-third-mb {
+            order: 3;
+        }
+
+        .order-last-mb {
+            order: 4;
+        }
+
+        .pijl {
+            width: 50%;
+            padding: 2em;
+        }
+
+        .pijl-rotate {
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+
+        .hero-title {
+            font-size: 11vw;
+        }
+
+        .hero-image {
+            height: 44em;
+        }
+
+        .block-overlay-image {
+            left: 0;
+            position: relative;
+        }
+
+        .block-overlay-text {
+            left: 0;
+            position: relative;
+        }
+
+        .block-shadow {
+            box-shadow: 0 0 0 0;
+            -webkit-box-shadow: 0 0 0 0;
+            -moz-box-shadow: 0 0 0 0;
+        }
+
+        .block-body {
+            border-radius: 0.5em 0.5em 0em 0em;
+        }
+
+        .pijlen-img,
+        .logo-img {
+            width: 100%;
+        }
+
+        .merk-box-padding {
+            padding: 1em;
+        }
+
+        .merk-box-padding-mb {
+            padding: 0em;
+        }
+
+        .block-merk-padding-top-mb {
+            padding-top: 2em;
+        }
+
+        .merk-background {
+            background-image: none;
+        }
+
+        .do-not-display-xs {
+            display: none;
+        }
+
+        .do-not-display-md {
+            display: block;
+        }
+
+        .buttonfix {
+            width: 100%;
+            display: block;
+        }
+
+        .caroussel-text-mobile {
+            right: 0;
+            width: 100%;
+            border-radius: 0;
+            height: 100%;
+            padding: 2em;
+        }
+
+        .caroussel-size-mobile {
+            height: 200px;
+        }
+    }
+</style>
+<div style="max-width: 1140px; ">
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+            <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/Logo.png"
+                alt="logo" style="padding: 2em;" width="500px">
+        </div>
+    </div>
+    <br>
+    <div class="v-center" style="border-bottom:1px solid #eee; padding-bottom: 2em;">
+        <div class="col-md-6 padding-mobile padding-text ">
+            <h1 class="titleColor item-header">
+                Open de deur naar een slimmer hotel.
+            </h1>
+            <p>Stroomlijn uw hotelbedrijf en optimaliseer de gastervaring door middel van intelligente
+                toegangstechnologie.</p>
+            <ul class="list-unstyled">
+                <li><span class=" 	glyphicon glyphicon-ok itemColor"></span> &nbsp; Het meest geavanceerde
+                    toegangssysteem voor gastvrijheid</li>
+                <li><span class=" 	glyphicon glyphicon-ok itemColor"></span> &nbsp; Absoluut naadloos voor gasten</li>
+                <li><span class=" 	glyphicon glyphicon-ok itemColor"></span> &nbsp; Volledig geautomatiseerd voor hotels
+                </li>
+            </ul>
+            <div class="row" style="margin-left: 0; margin-right: 0; margin-top: 2em;">
+                <div class="col-md-6 col-sm-6 col-xs-12 padding-left-0 padding-left-right-0 button-text-ipad"><a href=""
+                        target="_blank"><button type="button" class="main-button-color buttonfix button-inner">Boek een
+                            demo<span class="glyphicon glyphicon-chevron-right "
+                                style="font-size: 14px; "></span></button></a></div>
+                <div class="col-md-6 col-sm-6 col-xs-12 padding-right-0 padding-left-right-0 button-text-ipad"><a
+                        href=""><button type="button" class="side-button-color buttonfix button-inner">Neem contact
+                            op<span class="glyphicon glyphicon-chevron-right "
+                                style="font-size: 14px; "></span></button></a></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/Mockup-Vaya.png"
+                style="padding: 2em" alt="logo" class="img-responsive">
+        </div>
+    </div>
+
+    <div class="row" style="position: relative; z-index: 3; margin-top: 60px;">
+        <h1 class="titleColor item-header fix-margin margin-mobile" style="text-align: center; ">
+            Een oplossing voor elke situatie
+        </h1>
+    </div>
+    <div class="row" style="align-items: baseline; display: flex; margin-bottom: 4em; ">
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/Product-template-600x800New-front-of.png"
+                style="padding: 2em; border-right: 1px solid #eee" alt="logo" class="img-responsive">
+            <h3 class="titleColor">Sloten</h3>
+            <p style="text-align: center;">Ontworpen ter vervanging en voor nieuwbouw</p>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/4suites-slot-wit-960-600-1.gif"
+                style="padding: 2em; " alt="logo" class="img-responsive">
+            <h3 class="titleColor">Sloten upgraden</h3>
+            <p style="text-align: center;">Ontworpen om uw bestaande hotelsloten te upgraden</p>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/Product-template-600x800Reader-front.png"
+                style="padding: 2em; border-left: 1px solid #eee" alt="logo" class="img-responsive">
+            <h3 class="titleColor">Kaartlezers</h3>
+            <p style="text-align: center;">Ontworpen voor hoofdingangen en liften</p>
+        </div>
+    </div>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner caroussel-size-mobile">
+            <div class="item active">
+                <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/Screen%20Shot%202020-06-10%20at%2013.46.04.png"
+                    alt="1">
+                <div class="caroussel-text caroussel-text-mobile">
+                    <h4 class="titleColor" style="color: #ec3a6a; font-size: 24px;">Download niet nodig</h4>
+                    <h1 class="titleColor">Ontgrendelen met de web applicatie</h1>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/Screen%20Shot%202020-06-10%20at%2013.45.56.png"
+                    alt="2">
+                <div class="caroussel-text caroussel-text-mobile">
+                    <h4 class="titleColor" style="color: #ec3a6a; font-size: 24px;">RFID/NFC</h4>
+                    <h1 class="titleColor">Ontgrendelen met kaart</h1>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/Screen%20Shot%202020-06-10%20at%2013.46.12.png"
+                    alt="3">
+                <div class="caroussel-text caroussel-text-mobile">
+                    <h4 class="titleColor" style="color: #ec3a6a; font-size: 24px;">Overal vandaan</h4>
+                    <h1 class="titleColor">Ontgrendelen op afstand</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="v-center" style="background-color: black;">
+        <div class="col-md-6 padding-mobile padding-text " style="color: white">
+            <h1 style="color: White !important;">
+                Het Intelligent Access Platform voor gastvrijheid.
+            </h1>
+            <br>
+            <p>
+                4SUITES is een systeem van gekoppelde hardware en software, aangedreven door het Internet of Things, dat
+                intelligente toegangsoplossingen naar hotels brengt.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/Animatie-4Suites-Hotel_small.gif"
+                style="padding: 2em" alt="logo" class="img-responsive">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="titleColor item-header" style="text-align: center; margin-top: 60px; margin-bottom: 30px">
+                Vereenvoudiging van het leven. Voor iedereen.
+            </h1>
+        </div>
+        <div class="col-md-6 padding-mobile-vertical padding-mobile width-100-md"
+            style="text-align: center; padding: 5em;">
+            <span class="glyphicon glyphicon-user itemColor" style="font-size: 5em; color: #ec3a6a"></span>
+            <h1 style="color: black;">Gasten</h1>
+
+            <div style="border-bottom: 1px solid #eee; margin-bottom: 2em;"></div>
+            <p>Vereenvoudiging van de reis. Opwaarderen van de ervaring. Geen wachtrijen meer, meer gemak, volledige
+                controle en de hele reis binnen handbereik van uw gasten. </p>
+        </div>
+        <div class="col-md-6 padding-mobile-vertical padding-mobile width-100-md"
+            style="text-align: center; padding: 5em;">
+            <span class="glyphicon glyphicon-bed itemColor" style="font-size: 5em; color: #ec3a6a"></span>
+            <h1 style="color: black;">Hotels</h1>
+
+            <div style="border-bottom: 1px solid #eee; margin-bottom: 2em;"></div>
+            <p>Open de deur naar een slimmer hotel. Stroomlijn uw hotelactiviteiten, bespaar kosten, optimaliseer
+                ervaringen, verhoog de omzet en verkrijg waardevolle gegevens en inzichten. </p>
+        </div>
+    </div>
+    <div class="row" style="margin-left: 0; margin-right: 0; padding-bottom: 4em; border-bottom:1px solid #eee;">
+        <div class="col-md-6 col-sm-6 col-xs-12 button-text-ipad"><a href="" target="_blank"><button type="button"
+                    class="main-button-color buttonfix"
+                    style="font-size: 28px; margin-top: 10px; padding: 24px 44px 24px 44px; display: block; margin: auto; float: right;">Boek
+                    een demo<span class="glyphicon glyphicon-chevron-right "
+                        style="font-size: 20px; "></span></button></a></div>
+        <div class="col-md-6 col-sm-6 col-xs-12 button-text-ipad"><a href=""><button type="button"
+                    class="side-button-color buttonfix"
+                    style="font-size: 28px; margin-top: 10px; padding: 24px 44px 24px 44px; display: block; margin: auto; float: left;">Neem
+                    contact op<span class="glyphicon glyphicon-chevron-right "
+                        style="font-size: 20px; "></span></button></a></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="titleColor item-header" style="text-align: center; margin-top: 60px; margin-bottom: 30px">
+                Klantenverhalen
+            </h1>
+        </div>
+    </div>
+
+    <div id="myCarousel2" class="carousel slide caroussel-height" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner ">
+            <div class="item active caroussel-height-inner">
+                <div class="col-md-3 col-sm-6 col-xs-12" style="padding: 0px; height: 100%;">
+                    <img class="caroussel-img"
+                        src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/vaya-resorts1-e1586080074455.jpg"
+                        alt="1">
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12" style="padding: 2em; border-right: 1px solid #eee; ">
+                    <p style="color: #ec3a6a;">Oostenrijk</p>
+                    <h1 class="titleColor" style="margin-top: 10px;">VAYA Resorts</h1>
+                    <p style="font-size: 14px; color: grey;">
+                        In het hart van de toonaangevende bergsportbestemmingen van de Alpen, geven de VAYA fine living
+                        resorts hun gasten prachtige, unieke en ontspannende pauzes in prachtig ingerichte hotels en
+                        appartementen met stijl.
+                    </p>
+                    <p>
+                        VAYA fine living in SÖLDEN. SERFAUS. ST. ANTON . FIEBERBRUNN. KAPRUN.
+                    </p>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-12" style="padding: 2em; text-align: end;">
+                    <p style="color: #ec3a6a;">Internationaal</p>
+                    <h1 class="titleColor" style="margin-top: 10px;">SV Group</h1>
+                    <p style="font-size: 14px; color: grey;">
+                        Uitnodigend, warm, individueel: de gasten voelen zich volledig thuis in de hotels die door SV
+                        Hotel worden beheerd. De SV Group heeft een eigen merk - Stay Kooook - en werkt ook in een
+                        franchisepartnerschap met Marriott International.
+                    </p>
+                    <p>
+                        De hotels van SV Group zijn te vinden op toplocaties in trendy steden in Duitsland en
+                        Zwitserland.
+                    </p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12" style="padding: 0px; height: 100%;">
+                    <img class="caroussel-img"
+                        src="https://www.veiligheids-sloten.nl/blog/wp-content/uploads/2020/06/SV-Hotel-Group.jpeg"
+                        alt="1">
+                </div>
+            </div>
+            <div class="item caroussel-height-inner">
+                <div class="col-md-3 col-sm-6 col-xs-12" style="padding: 0px; height: 100%;">
+                    <img class="caroussel-img"
+                        src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/Pandox1.jpg"
+                        alt="1">
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12" style="padding: 2em; border-right: 1px solid #eee;">
+                    <p style="color: #ec3a6a;">Internationaal</p>
+                    <h1 class="titleColor" style="margin-top: 10px;">Pandox</h1>
+                    <p style="font-size: 14px; color: grey;">
+                        Pandox is een toonaangevende eigenaar van hoteleigendommen in Noord-Europa met een focus op
+                        grote hotels in belangrijke vrijetijds- en bedrijfsbestemmingen.
+                    </p>
+                    <p>
+                        De hotelportefeuille van Pandox bestaat uit 156 hotels met ongeveer 35.000 hotelkamers in 15
+                        landen.
+                    </p>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-12" style="padding: 2em; text-align: end; ">
+                    <p style="color: #ec3a6a;">Denemarken</p>
+                    <h1 class="titleColor" style="margin-top: 10px;">Go Hotel City</h1>
+                    <p style="font-size: 14px; color: grey;">
+                        In de nieuw gebouwde GO HOTEL CITY ontmoet u als klant een modern stadshotel in de buurt van het
+                        centrum van Kopenhagen. Of u nu een zakenreiziger bent, een student of samen reist in
+                        verschillende groepen, GO hotel is leverbaar
+                    </p>
+                    <p>
+                        GO Hotels currently has two hotels in Copenhagen with new hotels to follow.
+                    </p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12" style="padding: 0px; height: 100%;">
+                    <img class="caroussel-img"
+                        src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/nick-karvounis-3_ZGrsirryY-unsplash-scaled.jpg"
+                        alt="1">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel2" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="v-center"
+        style="border-bottom:1px solid #eee; padding-bottom: 2em;  padding-top: 2em; margin-top: 4em; background-color: #eeeeee;">
+        <div class="col-md-6 padding-mobile padding-text ">
+            <h4 style="color: #ec3a6a;">Ongeëvenaarde connectiviteit. Eindeloze mogelijkheden.</h4>
+            <h1 style="margin-top: 10px;" class="titleColor item-header">
+                Het gaat allemaal om de connecties
+            </h1>
+            <p>De kern van de horeca-innovatie ligt in de connectiviteit. Connectiviteit maakt hotelautomatisering,
+                naadloze gastreizen en innovatieve samenwerkingsverbanden mogelijk. De software- en hardwareoplossingen
+                van 4Suites zijn gebouwd met deze
+                connectiviteit en deze mogelijkheden in het achterhoofd. Connectiviteit zonder compromissen.</p>
+            <div class="row" style="margin-left: 0; margin-right: 0; margin-top: 2em;">
+                <div class="col-md-6 col-sm-6 col-xs-12 padding-left-0 padding-left-right-0 button-text-ipad"><a href=""
+                        target="_blank"><button type="button" class="main-button-color buttonfix button-inner">Boek een
+                            demo<span class="glyphicon glyphicon-chevron-right "
+                                style="font-size: 14px; "></span></button></a></div>
+                <div class="col-md-6 col-sm-6 col-xs-12 padding-right-0 padding-left-right-0 button-text-ipad"><a
+                        href=""><button type="button" class="side-button-color buttonfix button-inner">Neem contact
+                            op<span class="glyphicon glyphicon-chevron-right "
+                                style="font-size: 14px; "></span></button></a></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/Tekengebied-1%402x.png"
+                style="padding: 2em" alt="logo" class="img-responsive">
+        </div>
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="titleColor item-header" style="text-align: center; margin-top: 60px; margin-bottom: 30px">
+                    Automatisering is de sleutel
+                </h1>
+                <p>
+                    PMS zijn het centrale dashboard van uw hotelbediening en gastenervaring. 4Suites is aangesloten op
+                    diverse PMS'en om de volgende stap naar hotelautomatisering en -efficiëntie te bieden. We voegen
+                    onderweg nieuwe PMS toe en zijn in staat om op verzoek
+                    verbinding te maken.
+                </p>
+            </div>
+        </div>
+        <div class="row" style="border-bottom:1px solid #eee; padding-bottom: 2em;  padding-top: 2em;">
+            <div class="col-md-4 col-sm-6 col-xs-6">
+                <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/Stayntouch-grey-300x208.png"
+                    alt="stay" class="brands">
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-6">
+                <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/Mews-grey-2-300x208.png"
+                    alt="mews" class="brands">
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-6">
+                <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/Protel-grey-300x208.png"
+                    alt="protel" class="brands">
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-6">
+                <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/Apaleo-grey-300x208.png"
+                    alt="apaleo" class="brands">
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-6">
+                <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/Clock-grey-2-300x208.png"
+                    alt="clock" class="brands">
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-6">
+                <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/Cloud-Beds-Partner-logo-500x347.png"
+                    alt="cloudbeds" class="brands">
+            </div>
+        </div>
+
+    </div>
+    <div class="v-center" style=" padding-bottom: 2em;  padding-top: 2em; margin-top: 4em;">
+        <div class="col-md-6 padding-mobile padding-text text-align-content-right">
+
+            <h1 style="margin-top: 10px;" class="titleColor item-header">
+                Gastvrijheid herdacht
+            </h1>
+            <h4 style="color: #ec3a6a;">Een echt naadloze gastreis van begin tot eind.</h4>
+            <p>Het werken met Code2Order heeft in staat gesteld om de hotelactiviteiten verder te automatiseren en de
+                gasten worden vanaf de boekingsbevestiging tot aan het uitchecken begeleid binnen één webapplicatie (ja,
+                ook de sleutel staat in de webapplicatie).
+                Deze verbinding biedt nieuwe manieren van gastvrijheid en onze oorspronkelijke volledig geautomatiseerde
+                &amp; onbemande hotels zijn al geopend.</p>
+        </div>
+        <div class="col-md-6">
+            <img src="https://www.veiligheids-sloten.nl/blog/wp-content/uploads/2020/06/output-onlinepngtools-3-255x500-1.png"
+                style="padding: 2em" alt="logo" class="img-responsive center-block">
+        </div>
+    </div>
+    <div class="v-center" style=" padding-bottom: 2em;  padding-top: 2em; margin-top: 4em;">
+        <div class="col-md-6">
+            <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/bo9okboost-1-800x607.png"
+                style="padding: 2em" alt="logo" class="img-responsive center-block">
+        </div>
+        <div class="col-md-6 padding-mobile padding-text-inverted text-align-content-left">
+
+            <h1 style="margin-top: 10px;" class="titleColor item-header">
+                Maak contact met uw gasten
+            </h1>
+            <h4 style="color: #ec3a6a;">Het meest geavanceergenodigden-gespreksplatform voor gasten.</h4>
+            <p>Met Gastcommunicatie als een hot topic, werken we graag samen met Bookboost, die een geavanceerd
+                gastgespreksplatform op maat van de gastvrijheid bieden. Met 99% openingspercentages en de tools voor
+                gepersonaliseerde, geautomatiseerde en event-based
+                messaging kunnen hotels zich voorbereiden op het opbouwen van betere relaties, het optimaliseren van het
+                serviceniveau en het verhogen van de omzet.</p>
+        </div>
+    </div>
+    <div class="v-center" style="padding-bottom: 2em;  padding-top: 2em; margin-top: 4em;">
+        <div class="col-md-6 padding-mobile padding-text text-align-content-right">
+
+            <h1 style="margin-top: 10px;" class="titleColor item-header">
+                Een geautomatiseerde check-in-workflow
+            </h1>
+            <h4 style="color: #ec3a6a;">Een check-in kiosk voor uw hotel</h4>
+            <p>Aangezien meer hotels zelf incheckmogelijkheden bieden, kan een Check-in Kiosk een goede oplossing zijn
+                om zowel online als on-site inchecken voor uw gast aan te bieden. Onze samenwerking met Abitari stelt
+                hotels in staat om van elke tablet
+                een Check-in Kiosk te maken waar gasten een mobiele sleutel of keycard kunnen krijgen die geïntegreerd
+                is met het 4SUITES-platform.</p>
+        </div>
+        <div class="col-md-6">
+            <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/Kiosk-solution-mobile-keys-e1590743228949-800x692.png"
+                style="padding: 2em" alt="logo" class="img-responsive center-block">
+        </div>
+    </div>
+    <div class="v-center" style="padding-bottom: 2em;  padding-top: 2em; margin-top: 4em;">
+        <div class="col-md-6">
+            <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/4suites/Copy-of-Copy-of-DigitalGuest-INSTANT-a4-print-2-800x566.png"
+                style="padding: 2em" alt="logo" class="img-responsive center-block">
+        </div>
+        <div class="col-md-6 padding-mobile padding-text-inverted text-align-content-left">
+
+            <h1 style="margin-top: 10px;" class="titleColor item-header">
+                Naadloze Scandinavische Dienst
+            </h1>
+            <h4 style="color: #ec3a6a;">We moest maar eens samenwerken met de nr. 1 hospitality app in Scandinavië.</h4>
+            <p>DigitalGuest biedt een 100% web-based oplossing die geen app download vereist voor de gasten. Stelt u
+                zich nu geautomatiseerde communicatie voor, tijdens en na het verblijf, upselling en roomservice,
+                inchecken, mobiele sleutels, uitchecken
+                en betalen... allemaal binnen één web-applicatie. Zo ziet een naadloze technologische ervaring en de
+                toekomst van de gastvrijheid eruit.</p>
+        </div>
+    </div>
+
+    <div class="row" style="margin-left: 0; margin-right: 0; margin-top: 4em; margin-bottom: 4em;">
+        <div class="col-md-6 col-sm-6 col-xs-12 button-text-ipad"><a href="" target="_blank"><button type="button"
+                    class="main-button-color buttonfix"
+                    style="font-size: 28px; margin-top: 10px; padding: 24px 44px 24px 44px; display: block; margin: auto; float: right;">Boek
+                    een demo<span class="glyphicon glyphicon-chevron-right "
+                        style="font-size: 20px; "></span></button></a>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12 button-text-ipad"><a href=""><button type="button"
+                    class="side-button-color buttonfix"
+                    style="font-size: 28px; margin-top: 10px; padding: 24px 44px 24px 44px; display: block; margin: auto; float: left;">Neem
+                    contact op<span class="glyphicon glyphicon-chevron-right "
+                        style="font-size: 20px; "></span></button></a></div>
+    </div>

@@ -1,0 +1,568 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/jquery/jquery-3.5.1.min.js"
+    type="text/javascript"></script>
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/jquery/jquery-3.5.1.min.js"
+    type="text/javascript"></script>
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/jquery/jquery.rwdImageMaps.min.js"
+    type="text/javascript"></script>
+<link href="https://www.veiligheids-sloten.nl/catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+    media="screen">
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/bootstrap/js/bootstrap.min.js"
+    type="text/javascript"></script>
+<link href="https://www.veiligheids-sloten.nl/catalog/view/javascript/font-awesome/css/font-awesome.min.css"
+    rel="stylesheet" type="text/css">
+<link href="https://www.veiligheids-sloten.nl/catalog/view/theme/default/stylesheet/stylesheet.min.css" rel="stylesheet"
+    type="text/css">
+<link href="https://www.veiligheids-sloten.nl/catalog/view/theme/default/stylesheet/megamenu.min.css" rel="stylesheet"
+    type="text/css">
+<link href="https://www.veiligheids-sloten.nl/catalog/view/theme/default/stylesheet/megamenu.min.css" rel="stylesheet"
+    type="text/css">
+<script src="https://www.veiligheids-sloten.nl/catalog/view/javascript/common.min.js" type="text/javascript"></script>
+
+<style>
+    #nuki-bottom {
+        max-width: 1140px;
+    }
+
+    #nuki-bottom h1 {
+        color: #fff;
+        font-size: 48px;
+    }
+
+    #nuki-bottom h2 {
+        color: #222;
+    }
+
+    #nuki-bottom h4 {
+        color: #fff;
+        font-size: 22px;
+    }
+
+    #intro {
+        position: relative;
+    }
+
+    .intro-text {
+        color: #ffffff;
+        position: absolute;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        z-index: 5;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 80%;
+    }
+
+    .intro-img {
+        color: #ffffff;
+        position: absolute;
+        z-index: 5;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 80%;
+    }
+
+    .collab {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: baseline;
+        flex-wrap: wrap;
+    }
+
+    .brand {
+        width: 200px;
+        height: auto;
+        margin: 1rem 0;
+    }
+
+    .video-intro {
+        width: 100%;
+        height: 641px;
+        position: relative;
+        filter: brightness(50%);
+    }
+
+    video {
+        object-fit: cover;
+    }
+
+    #voordelen {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        padding: 4rem 2rem;
+        background-color: #fdfdfd;
+    }
+
+    .voordeel {
+        padding: 4rem;
+    }
+
+    #stad {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 4rem 2rem;
+        background-color: #000000;
+        justify-content: space-evenly;
+    }
+
+    .gebouw {
+        padding: 4rem;
+        margin: 1rem;
+        color: #ffffff;
+        background-color: #111111;
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .gebouwbeschrijving {
+        text-align: center;
+    }
+
+    .logo {
+        text-align: center;
+        background-image: url('https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/Nuki/blog-head.svg');
+        background-position: center;
+    }
+
+    .logo-img {
+        max-width: 300px;
+        padding: 2rem;
+    }
+
+    .app {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    #app {
+        padding-top: 4rem;
+    }
+
+    .header-black {
+        color: #222 !important;
+        text-align: center;
+        font-size: 42px !important;
+    }
+
+    .nuki-app-img {
+        padding: 4rem;
+    }
+
+    @media only screen and (max-width: 1199px) and (min-width: 992px) {
+        .gebouw {
+            margin: 1rem 4rem;
+        }
+
+        .brand {
+            width: 300px;
+        }
+    }
+
+    @media only screen and (max-width: 991px) and (min-width: 769px) {
+        .nuki-app-text .accordion-nuki {
+            font-size: 16px !important;
+        }
+
+        .nuki-app-img {
+            padding: 0rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .logo-img {
+            max-width: 200px;
+        }
+
+        #voordelen,
+        .app {
+            flex-direction: column;
+        }
+    }
+
+    .vragen,
+    .nuki-app-text {
+        padding: 4rem 2rem;
+    }
+
+    .vragen .accordion-nuki,
+    .nuki-app-text .accordion-nuki {
+        background-color: #fff;
+        color: #000;
+        cursor: pointer;
+        padding: 28px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 20px;
+        transition: 0.4s;
+    }
+
+    .vragen .active,
+    .vragen .accordion-nuki:hover,
+    .nuki-app-text .active,
+    .nuki-app-text .accordion-nuki:hover {
+        background-color: #eee;
+        border-bottom: none;
+    }
+
+    .vragen .accordion-nuki:after {
+        content: '\002B';
+        float: right;
+        margin-left: 5px;
+    }
+
+    .nuki-app-text .accordion-nuki:after {
+        content: '\25EF';
+        float: left;
+        color: #fecb3f;
+        font-size: 36px;
+        margin-right: 20px;
+    }
+
+    .vragen p,
+    .nuki-app-text p {
+        margin: 2rem 0;
+    }
+
+    .vragen .active:after {
+        content: "\2212";
+    }
+
+    .vragen .panelnuki,
+    .nuki-app-text .panelnuki {
+        padding: 0 28px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        border-bottom: 1px #eee solid;
+    }
+</style>
+<div id="nuki-bottom">
+    <div class="logo"><img
+            src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/Nuki/nuki-logo-white.png"
+            class="logo-img" alt="nuki logo"></div>
+    <div id="intro">
+        <div class="intro-text">
+            <h1>Slimme toegang voor iedereen</h1>
+            <p>Maak van je smartphone een sleutel en nodig familieleden, vrienden en bijv. ook de schoonmaakster uit om
+                met Nuki jouw deur af te sluiten. Er kunnen maximaal 100 toegangsrechten eenmalig, aanhoudend of
+                tijdelijk begrensd worden toegewezen.
+                Zo hoeft u nooit meer bang te zijn dat iemand een sleutel kwijtraakt.</p>
+        </div>
+        <div class="intro-img">
+            <h4>Nuki werkt met</h4>
+            <hr>
+            <div class="collab">
+                <div class="brand"><img
+                        src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/Nuki/alexa.svg"
+                        alt="alexa"></div>
+                <div class="brand"><img
+                        src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/Nuki/google-assistant-home.svg"
+                        alt="google assistant"></div>
+                <div class="brand"><img
+                        src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/Nuki/homekit.svg"
+                        alt="homekit"></div>
+                <div class="brand"><img
+                        src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/Nuki/airbnb.svg"
+                        alt="airbnb"></div>
+            </div>
+        </div>
+        <video class="m-top-20 video-intro" autoplay="" loop="" muted="" playsinline="">
+            <source src="https://www.veiligheids-sloten.nl/blog/wp-content/uploads/2020/09/nuki-hero-nl.mp4"
+                type="video/mp4">
+        </video>
+    </div>
+    <div id="app">
+        <div style="text-align: center; color: #222;">
+            <h1 class="header-black">Bedien je Smart Lock met de Nuki-app</h1>
+            <p>De Nuki-app is gratis beschikbaar voor iOS- en Android-toestellen. Met de Nuki-app kun je al je
+                Nuki-producten installeren, beheren en bedienen. </p>
+        </div>
+        <div class="app">
+            <div style="text-align: center;">
+                <img src="https://www.veiligheids-sloten.nl/image/catalog/Tabellen/nuki-app-nl.gif" alt="nuki app"
+                    class="nuki-app-img">
+            </div>
+            <div class="nuki-app-text">
+                <button class="accordion-nuki">Slot ontgrendelen en vergrendelen</button>
+                <div class="panelnuki">
+                    <p>Het elektronische deurslot eenvoudig ont- en vergrendelen door op de smartphone te swipen of via
+                        je smartwatch.</p>
+                </div>
+                <button class="accordion-nuki">Auto-unlock</button>
+                <div class="panelnuki">
+                    <p>Als je Auto Unlock hebt geactiveerd, herkent de Nuki Smart Lock je telefoon en opent automatisch
+                        je deur zonder dat je er ook maar iets voor hoeft te doen. </p>
+                </div>
+                <button class="accordion-nuki">Lock 'n' Go</button>
+                <div class="panelnuki">
+                    <p>Als je je huis verlaat en Nuki de deur achter je moet vergrendelen, dan gebruik je eenvoudig de
+                        Lock ’n’ Go-functie. Ofwel met de Nuki-app of direct met de knop op de Smart Lock. </p>
+                </div>
+                <button class="accordion-nuki">Toegangsrechten</button>
+                <div class="panelnuki">
+                    <p>Beheer toegangsrechten voor je familie, vrienden, gasten, klusjesman of babysitter; je kunt
+                        kiezen tussen permanent, periodiek of eenmalig.</p>
+                </div>
+                <button class="accordion-nuki">Vergrendelingslogboek</button>
+                <div class="panelnuki">
+                    <p>Als je dat wilt, kan de Nuki-app ook nauwkeurig bijhouden wie wanneer je Smart Lock heeft geopend
+                        of gesloten.</p>
+                </div>
+                <button class="accordion-nuki">Integratie met de smartwatch</button>
+                <div class="panelnuki">
+                    <p>De Nuki App is ook beschikbaar voor Apple Watch en Android smartwatches. Open en sluit je
+                        deurslot comfortabel vanaf je pols.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="voordelen">
+        <div class="voordeel">
+            <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/Nuki/smart.svg"
+                alt="Smart">
+            <h2>Smart</h2>
+            <p>Het elektronische deurslot van Nuki ontgrendelt automatisch de deur als je thuiskomt en sluit weer veilig
+                af als je vertrekt. Je smartphone kun je daarbij gewoon in je zak houden!</p>
+        </div>
+        <div class="voordeel">
+            <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/Nuki/simple.svg"
+                alt="Eenvoudig">
+            <h2>Eenvoudig</h2>
+            <p>De Nuki Smart Lock wordt aan de binnenzijde op een bestaand deurslot gemonteerd en is binnen 3 minuten
+                klaar voor gebruik. En dat zonder schroeven en boren.</p>
+        </div>
+        <div class="voordeel">
+            <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/Nuki/secure.svg"
+                alt="Veilig">
+            <h2>Veilig</h2>
+            <p>Behoud altijd de regie door de status van jouw Smart Lock op je smartphone te bekijken en toegangsrechten
+                voor familie en vrienden te beheren.</p>
+        </div>
+    </div>
+    <div id="video">
+        <!-- close video on modal close-->
+        <script>
+            $(document).ready(function () {
+                $('.modal').each(function () {
+                    var src = $(this).find('iframe').attr('src');
+                    $(this).on('click', function () {
+                        $(this).find('iframe').attr('src', '');
+                        $(this).find('iframe').attr('src', src);
+                    });
+                });
+            });
+        </script>
+
+        <style>
+            .video-center-align-text {
+                position: absolute;
+                top: 50%;
+                left: 40%;
+                transform: translate(-35%, -50%);
+                z-index: 5;
+                text-align: center;
+            }
+
+            .video-container-modal {
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding-bottom: 56.25%;
+            }
+
+            .video-modal-text {
+                color: #fff !important;
+                font-size: 44px;
+                font-weight: 500;
+                line-height: 1.5;
+            }
+
+            .video-background {
+                height: 500px;
+                background-image: url("https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/Nuki/nuki-video-2-0-bg.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .video-modal {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .modal {
+                text-align: center;
+                padding-right: 0px !important;
+            }
+
+            .modal-dialog {
+                display: inline-block;
+                text-align: left;
+                vertical-align: middle;
+            }
+
+            .modal:before {
+                display: inline-block;
+                vertical-align: middle;
+                content: " ";
+                height: 100%;
+            }
+
+            @media (max-width: 768px) {
+                .modal-dialog {
+                    width: 100%;
+                    margin: 0px;
+                }
+
+                .video-center-align-text {
+                    left: 10%;
+                    transform: translate(-5%, -50%);
+                }
+
+                .video-modal-text {
+                    font-size: 36px;
+                }
+            }
+
+            @media (min-width: 768px) {
+                .modal-dialog {
+                    width: 800px;
+                    margin: 30px auto;
+                }
+
+                .modal-xl {
+                    width: 90%;
+                    max-width: 1200px;
+                }
+            }
+
+            @media (min-width: 992px) {
+                .modal-lg {
+                    width: 1000px;
+                }
+            }
+        </style>
+        <div class="video-background" data-toggle="modal" data-target="#modal-video">
+            <div class="video-center-align-text">
+                <h2 class="video-modal-text">Ontdek de Nuki Smart Lock 2.0 in deze korte video</h2>
+                <h4 class="video-modal-text" style="font-size: 26px;">Meer info <span style="font-size: 20px;" class="
+                    glyphicon glyphicon-play-circle"></span></h4>
+            </div>
+        </div>
+        <!-- Modal video -->
+        <div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-info"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="video-container-modal">
+                        <iframe src="https://www.youtube.com/embed/H27PQgXQjaE" allowfullscreen="" class="video-modal"
+                            frameborder="0">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="stad">
+        <div class="gebouwbeschrijving">
+            <div class="gebouw">
+                <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/Nuki/efh.svg"
+                    alt="Eengezinswoning">
+            </div>
+            <h4>Eengezinswoning</h4>
+        </div>
+        <div class="gebouwbeschrijving">
+            <div class="gebouw">
+                <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/Nuki/mfh.svg"
+                    alt="Meergezinswoning">
+            </div>
+            <h4>Meergezinswoning</h4>
+        </div>
+        <div class="gebouwbeschrijving">
+            <div class="gebouw">
+                <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/Nuki/business.svg"
+                    alt="Bedrijf">
+            </div>
+            <h4>Bedrijf</h4>
+        </div>
+        <div class="gebouwbeschrijving">
+            <div class="gebouw">
+                <img src="https://www.veiligheids-sloten.nl/image/catalog/Veiligheids-sloten/Info/Nuki/fwhg.svg"
+                    alt="Vakantiehuis">
+            </div>
+            <h4>Vakantiehuis</h4>
+        </div>
+    </div>
+
+    <div class="vragen">
+        <h1 class="header-black">Veelgestelde vragen</h1>
+        <button class="accordion-nuki">Hoe veilig is Nuki?</button>
+        <div class="panelnuki">
+            <p>De communicatie van de Smart Locks werkt via end-to-end encryptie. De veiligheidsnormen zijn te
+                vergelijken met die van internetbankieren. Nuki is dan ook getest en gecertificeerd door onafhankelijke
+                veiligheidsexperts en -instanties. </p>
+        </div>
+        <button class="accordion-nuki">Kan ik de deur ook gewoon met de sleutel afsluiten?</button>
+        <div class="panelnuki">
+            <p>Als het cilinderslot voorzien is van een paniekfunctie, kun je je deur ook gewoon met je oude sleutel
+                afsluiten. De paniekfunctie herken je aan het feit dat je de sleutel nog steeds kunt omdraaien als er al
+                een sleutel aan de andere kant in
+                het slot zit.
+            </p>
+        </div>
+        <button class="accordion-nuki">Wat gebeurt er als de batterijen van de Smart Lock leeg zijn?</button>
+        <div class="panelnuki">
+            <p>Wanneer het batterijpercentage onder 20% is, stelt de Nuki-app jou hiervan op de hoogte en heb je
+                voldoende tijd om de batterijen te vervangen. Bovendien kun je de deur met je sleutel afsluiten als jouw
+                deurslot is voorzien van een nood- of
+                gevarenfunctie. De levensduur van de batterijen bedraagt gemiddeld 6 maanden. Het energieverbruik van
+                jouw Smart Lock hangt af van het aantal keer dat je hem gebruikt en hoe soepel hij werkt.</p>
+        </div>
+        <button class="accordion-nuki">Hoe kan ik de deur afsluiten als ik mijn mobiele telefoon vergeten ben of als de
+            accu leeg is?</button>
+        <div class="panelnuki">
+            <p>Je kunt de Nuki Smart Lock op verschillende manieren vergrendelen als je jouw smartphone niet bij de hand
+                hebt. Gebruik bijvoorbeeld de kleine Nuki Bluetooth-Fob, waarmee je zonder sleutel en ook zonder
+                smartphone de deur kunt afsluiten. Je
+                kunt ook inloggen met je Nuki-account via elk toestel met internettoegang en op die manier de deur
+                afsluiten. Wanneer jouw deurslot van een paniekfunctie is voorzien, kun je je deur ook gewoon met de
+                originele sleutel afsluiten. </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion-nuki");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panelnuki = this.nextElementSibling;
+            if (panelnuki.style.maxHeight) {
+                panelnuki.style.maxHeight = null;
+            } else {
+                panelnuki.style.maxHeight = panelnuki.scrollHeight + "px";
+            }
+        });
+    }
+</script>
